@@ -31,7 +31,7 @@ def validaOpcaoCompra(opcao):
         exit()
 
 def continuarCompra():
-    continuarCompra = int(input("Deseja continuar comprando? 1 - SIM    2 - NÃO"))
+    continuarCompra = int(input("Deseja continuar comprando? 1 - SIM    2 - NÃO "))
     if (continuarCompra == 1):
         menu()
     else:
@@ -43,7 +43,11 @@ def menuEscolha(opcao):
    quantidade = int(input())
    valorCompra = opcao * quantidade
    continuarCompra()
+   exit()
 
+def imprimeRelatorio():
+    print("IMPRIMINDO...")
+    exit()
 
 
 menu()
