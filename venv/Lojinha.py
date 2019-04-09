@@ -74,6 +74,7 @@ def menuEscolha(opcao):
 
 def imprimeRelatorio():
     print("IMPRIMINDO...")
+    arq = open(mes + ".txt", "a")
     arq = open(mes + ".txt", "r")
     texto = arq.readlines()
     print(texto)
