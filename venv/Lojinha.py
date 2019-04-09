@@ -81,9 +81,9 @@ def imprimeRelatorio():
     exit()
 
 def salvaCompra(venda):
-    arq = open(mes + ".txt", "w")
+    arq = open(mes + ".txt", "a")
     arq.write(venda)
-    arq.write("\n")
+    arq.write("\r")
 
 menu()
 
