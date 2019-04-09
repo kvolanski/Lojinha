@@ -1,5 +1,7 @@
+import datetime
 
-
+data = datetime.datetime.now()
+mes = data.strftime("%B")
 
 espingarda = 100
 arco = 50
@@ -72,14 +74,14 @@ def menuEscolha(opcao):
 
 def imprimeRelatorio():
     print("IMPRIMINDO...")
-    arq = open("detalhesCompras.txt", "r")
+    arq = open(mes + ".txt", "r")
     texto = arq.readlines()
     print(texto)
     arq.close()
     exit()
 
 def salvaCompra(venda):
-    arq = open("detalhesCompras.txt", "w")
+    arq = open(mes + ".txt", "w")
     arq.write(venda)
     arq.write("\n")
 
