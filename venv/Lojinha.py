@@ -35,20 +35,53 @@ def continuarCompra():
     if (continuarCompra == 1):
         menu()
     else:
+        print("Obrigado pela preferencia")
         exit()
 
 def menuEscolha(opcao):
    validaOpcaoCompra(opcao)
    print("Qual a quantidade que deseja comprar?")
    quantidade = int(input())
-   valorCompra = opcao * quantidade
+   if(opcao == 1):
+       valorCompra = espingarda * quantidade
+       venda = "Você comprou " + str(quantidade) + " unidades de Espingarda 22 com o total de R$" + str(valorCompra) + "."
+       salvaCompra(venda)
+       print(venda)
+   elif(opcao == 2):
+       valorCompra = arco * quantidade
+       venda = "Você comprou " + str(quantidade) + " unidades de Arco e Flecha com o total de R$" + str(valorCompra) + "."
+       salvaCompra(venda)
+       print(venda)
+   elif(opcao == 3):
+       valorCompra = batatinha * quantidade
+       venda = "Você comprou " + str(quantidade) + " unidades de 38 batatinha com o total de R$" + str(valorCompra) + "."
+       salvaCompra(venda)
+       print(venda)
+   elif (opcao == 4):
+       valorCompra = garrucha * quantidade
+       venda = "Você comprou " + str(quantidade) + " unidades de Garrucha com o total de R$" + str(valorCompra) + "."
+       salvaCompra(venda)
+       print(venda)
+   elif (opcao == 5):
+       valorCompra = doze * quantidade
+       venda = "Você comprou " + str(quantidade) + " unidades de  12 com o total de R$" + str(valorCompra) + "."
+       salvaCompra(venda)
+       print(venda)
    continuarCompra()
    exit()
 
 def imprimeRelatorio():
     print("IMPRIMINDO...")
+    arq = open("detalhesCompras.txt", "r")
+    texto = arq.readlines()
+    print(texto)
+    arq.close()
     exit()
 
+def salvaCompra(venda):
+    arq = open("detalhesCompras.txt", "w")
+    arq.write(venda)
+    arq.write("\n")
 
 menu()
 
