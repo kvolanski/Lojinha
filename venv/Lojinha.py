@@ -76,7 +76,7 @@ def imprimeRelatorio():
     print("IMPRIMINDO...")
     arq = open(mes + ".txt", "a")
     arq = open(mes + ".txt", "r")
-    texto = arq.readlines()
+    texto = arq.read()
     print(texto)
     arq.close()
     exit()
